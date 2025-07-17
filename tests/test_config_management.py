@@ -124,7 +124,7 @@ def test_token_tracker():
         print("📝 测试使用跟踪...")
         record = token_tracker.track_usage(
             provider="dashscope",
-            model_name="qwen-turbo",
+            model_name="qwen-turbo-latest",
             input_tokens=2000,
             output_tokens=1000,
             session_id="test_session_123",
@@ -142,7 +142,7 @@ def test_token_tracker():
         print("📝 测试成本估算...")
         estimated_cost = token_tracker.estimate_cost(
             provider="dashscope",
-            model_name="qwen-turbo",
+            model_name="qwen-turbo-latest",
             estimated_input_tokens=1000,
             estimated_output_tokens=500
         )
@@ -169,8 +169,8 @@ def test_pricing_accuracy():
         
         # 测试不同供应商的定价
         test_cases = [
-            ("dashscope", "qwen-turbo", 1000, 500),
-            ("dashscope", "qwen-plus", 2000, 1000),
+            ("dashscope", "qwen-turbo-latest", 1000, 500),
+            ("dashscope", "qwen-plus-latest", 2000, 1000),
             ("openai", "gpt-3.5-turbo", 1000, 500),
             ("google", "gemini-pro", 1000, 500),
         ]
@@ -202,8 +202,8 @@ def test_usage_statistics():
         
         # 添加多条使用记录
         test_records = [
-            ("dashscope", "qwen-turbo", 1000, 500, "session1", "stock_analysis"),
-            ("dashscope", "qwen-plus", 2000, 1000, "session2", "stock_analysis"),
+            ("dashscope", "qwen-turbo-latest", 1000, 500, "session1", "stock_analysis"),
+            ("dashscope", "qwen-plus-latest", 2000, 1000, "session2", "stock_analysis"),
             ("openai", "gpt-3.5-turbo", 1500, 750, "session3", "news_analysis"),
             ("google", "gemini-pro", 1200, 600, "session4", "social_analysis"),
         ]

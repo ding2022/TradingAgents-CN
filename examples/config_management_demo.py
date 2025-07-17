@@ -44,9 +44,9 @@ def demo_cost_calculation():
     
     # 测试不同模型的成本
     test_cases = [
-        ("dashscope", "qwen-turbo", 1000, 500, "快速分析"),
-        ("dashscope", "qwen-plus", 2000, 1000, "标准分析"),
-        ("dashscope", "qwen-max", 3000, 1500, "深度分析"),
+        ("dashscope", "qwen-turbo-latest", 1000, 500, "快速分析"),
+        ("dashscope", "qwen-plus-latet", 2000, 1000, "标准分析"),
+        ("dashscope", "qwen-max-latet", 3000, 1500, "深度分析"),
         ("openai", "gpt-3.5-turbo", 1000, 500, "GPT-3.5分析"),
         ("google", "gemini-pro", 1000, 500, "Gemini分析"),
     ]
@@ -70,7 +70,7 @@ def demo_usage_tracking():
     demo_sessions = [
         {
             "provider": "dashscope",
-            "model": "qwen-turbo",
+            "model": "qwen-turbo-lastet",
             "input_tokens": 1500,
             "output_tokens": 800,
             "analysis_type": "美股_analysis",
@@ -78,7 +78,7 @@ def demo_usage_tracking():
         },
         {
             "provider": "dashscope", 
-            "model": "qwen-plus",
+            "model": "qwen-plus-latest",
             "input_tokens": 2500,
             "output_tokens": 1200,
             "analysis_type": "A股_analysis",
@@ -172,8 +172,8 @@ def demo_cost_estimation():
     ]
     
     models_to_test = [
-        ("dashscope", "qwen-turbo"),
-        ("dashscope", "qwen-plus"),
+        ("dashscope", "qwen-turbo-latest"),
+        ("dashscope", "qwen-plus-latest"),
         ("openai", "gpt-3.5-turbo"),
         ("google", "gemini-pro")
     ]
@@ -211,7 +211,7 @@ def demo_settings_management():
     
     # 演示设置修改
     print(f"\n📝 当前成本警告阈值: ¥{settings.get('cost_alert_threshold', 100)}")
-    print(f"📝 当前默认模型: {settings.get('default_provider', 'dashscope')}/{settings.get('default_model', 'qwen-turbo')}")
+    print(f"📝 当前默认模型: {settings.get('default_provider', 'dashscope')}/{settings.get('default_model', 'qwen-turbo-latest')}")
     print(f"📝 成本跟踪状态: {'启用' if settings.get('enable_cost_tracking', True) else '禁用'}")
 
 

@@ -25,7 +25,7 @@ def test_dashscope_chinese():
         
         # 创建模型实例
         llm = ChatDashScope(
-            model="qwen-plus",
+            model="qwen-plus-latest",
             temperature=0.1,
             max_tokens=500
         )
@@ -77,7 +77,7 @@ def test_signal_processor_chinese():
         
         # 创建模型实例
         llm = ChatDashScope(
-            model="qwen-plus",
+            model="qwen-plus-latest",
             temperature=0.1,
             max_tokens=100
         )

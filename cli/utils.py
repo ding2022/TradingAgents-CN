@@ -154,9 +154,9 @@ def select_shallow_thinking_agent(provider) -> str:
             ("llama3.2 local", "llama3.2"),
         ],
         "阿里百炼 (dashscope)": [
-            ("通义千问 Turbo - 快速响应，适合日常对话", "qwen-turbo"),
-            ("通义千问 Plus - 平衡性能和成本", "qwen-plus"),
-            ("通义千问 Max - 最强性能", "qwen-max"),
+            ("通义千问 Turbo - 快速响应，适合日常对话", "qwen-turbo-latest"),
+            ("通义千问 Plus - 平衡性能和成本", "qwen-plus-latest"),
+            ("通义千问 Max - 最强性能", "qwen-max-latest"),
         ]
     }
 
@@ -230,10 +230,10 @@ def select_deep_thinking_agent(provider) -> str:
             ("qwen3", "qwen3"),
         ],
         "阿里百炼 (dashscope)": [
-            ("通义千问 Turbo - 快速响应，适合日常对话", "qwen-turbo"),
-            ("通义千问 Plus - 平衡性能和成本", "qwen-plus"),
-            ("通义千问 Max - 最强性能", "qwen-max"),
-            ("通义千问 Max 长文本版 - 支持超长上下文", "qwen-max-longcontext"),
+            ("通义千问 Turbo - 快速响应，适合日常对话", "qwen-turbo-latest"),
+            ("通义千问 Plus - 平衡性能和成本", "qwen-plus-latest"),
+            ("通义千问 Max - 最强性能", "qwen-max-latest"),
+            ("通义千问 Max 长文本版 - 支持超长上下文", "qwen-long-latest"),
         ]
     }
     

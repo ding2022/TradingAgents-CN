@@ -25,7 +25,7 @@ def test_format_analysis_results():
         'analysis_date': '2025-06-27',
         'analysts': ['market', 'fundamentals'],
         'research_depth': 3,
-        'llm_model': 'qwen-plus',
+        'llm_model': 'qwen-plus-latest',
         'state': {
             'market_report': '技术分析报告...',
             'fundamentals_report': '基本面分析报告...'
@@ -52,7 +52,7 @@ def test_format_analysis_results():
         'analysis_date': '2025-06-27',
         'analysts': ['market', 'fundamentals'],
         'research_depth': 3,
-        'llm_model': 'qwen-plus',
+        'llm_model': 'qwen-plus-latest',
         'state': {
             'market_report': '技术分析报告...',
             'fundamentals_report': '基本面分析报告...'
@@ -86,7 +86,7 @@ def test_format_analysis_results():
         'analysis_date': '2025-06-27',
         'analysts': ['market', 'fundamentals'],
         'research_depth': 3,
-        'llm_model': 'qwen-plus',
+        'llm_model': 'qwen-plus-latest',
         'state': {
             'market_report': '技术分析报告...',
             'fundamentals_report': '基本面分析报告...'

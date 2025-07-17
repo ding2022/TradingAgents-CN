@@ -1289,7 +1289,7 @@ def config():
 
     providers_table.add_row(
         "🇨🇳 阿里百炼 (DashScope)",
-        "qwen-turbo, qwen-plus, qwen-max",
+        "qwen-turbo-latest, qwen-plus-latest, qwen-max-latest",
         "✅ 推荐 | Recommended",
         "国产大模型，中文优化 | Chinese-optimized"
     )

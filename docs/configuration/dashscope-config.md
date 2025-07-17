@@ -89,7 +89,7 @@ python demo_dashscope.py
 config = {
     "llm_provider": "dashscope",
     "deep_think_llm": "qwen-plus-latest",      # 深度思考使用Plus
-    "quick_think_llm": "qwen-turbo",    # 快速任务使用Turbo
+    "quick_think_llm": "qwen-turbo-latest",    # 快速任务使用Turbo
     "max_debate_rounds": 1,             # 减少辩论轮次
 }
 ```
@@ -98,8 +98,8 @@ config = {
 ```python
 config = {
     "llm_provider": "dashscope", 
-    "deep_think_llm": "qwen-max",       # 深度思考使用Max
-    "quick_think_llm": "qwen-plus",     # 快速任务使用Plus
+    "deep_think_llm": "qwen-max-latest",       # 深度思考使用Max
+    "quick_think_llm": "qwen-plus-latest",     # 快速任务使用Plus
     "max_debate_rounds": 2,             # 增加辩论轮次
 }
 ```
@@ -108,8 +108,8 @@ config = {
 ```python
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-max-longcontext",  # 使用长文本版本
-    "quick_think_llm": "qwen-plus",
+    "deep_think_llm": "qwen-long-latest",  # 使用长文本版本
+    "quick_think_llm": "qwen-plus-latest",
     "max_debate_rounds": 1,
 }
 ```
@@ -125,7 +125,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "dashscope"
 config["deep_think_llm"] = "qwen-plus-latest"
-config["quick_think_llm"] = "qwen-turbo"
+config["quick_think_llm"] = "qwen-turbo-latest"
 
 # 初始化
 ta = TradingAgentsGraph(debug=True, config=config)
@@ -141,7 +141,7 @@ print(decision)
 config = DEFAULT_CONFIG.copy()
 config.update({
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-max",
+    "deep_think_llm": "qwen-max-latest",
     "quick_think_llm": "qwen-plus-latest",
     "max_debate_rounds": 2,
     "max_risk_discuss_rounds": 2,

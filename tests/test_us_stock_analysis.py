@@ -32,7 +32,7 @@ def test_us_stock_market_analysis():
         
         # 创建Tongyi LLM
         llm = Tongyi()
-        llm.model_name = 'qwen-turbo'
+        llm.model_name = 'qwen-turbo-latest'
 
         # 创建ReAct市场分析师
         analyst = create_market_analyst_react(llm, toolkit)
@@ -93,7 +93,7 @@ def test_us_stock_fundamentals_analysis():
         
         # 创建Tongyi LLM
         llm = Tongyi()
-        llm.model_name = 'qwen-turbo'
+        llm.model_name = 'qwen-turbo-latest'
 
         # 创建ReAct基本面分析师
         analyst = create_fundamentals_analyst_react(llm, toolkit)

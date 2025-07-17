@@ -238,7 +238,7 @@ def render_pricing_config():
     
     with col1:
         new_provider = st.text_input("供应商", placeholder="例如: openai, dashscope", key="new_pricing_provider")
-        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus", key="new_pricing_model")
+        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus-latest", key="new_pricing_model")
         new_currency = st.selectbox("货币", ["CNY", "USD", "EUR"], key="new_pricing_currency")
 
     with col2:
@@ -414,7 +414,7 @@ def render_system_settings():
     with col2:
         default_model = st.text_input(
             "默认模型",
-            value=settings.get("default_model", "qwen-turbo"),
+            value=settings.get("default_model", "qwen-turbo-latest"),
             key="settings_default_model"
         )
 

@@ -171,8 +171,8 @@ def test_risk_assessment_integration():
         config = DEFAULT_CONFIG.copy()
         if dashscope_key:
             config["llm_provider"] = "dashscope"
-            config["deep_think_llm"] = "qwen-plus"
-            config["quick_think_llm"] = "qwen-turbo"
+            config["deep_think_llm"] = "qwen-plus-latest"
+            config["quick_think_llm"] = "qwen-turbo-latest"
         elif google_key:
             config["llm_provider"] = "google"
             config["deep_think_llm"] = "gemini-2.0-flash"

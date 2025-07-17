@@ -19,7 +19,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 # 加载 .env 文件
 load_dotenv()
 
-def analyze_stock_with_chinese_output(stock_symbol="AAPL", analysis_date="2024-05-10"):
+def analyze_stock_with_chinese_output(stock_symbol="601600", analysis_date="2025-07-12"):
     """使用阿里百炼进行中文股票分析"""
     
     print("🚀 TradingAgents 中文股票分析 - 阿里百炼版本")
@@ -148,9 +148,9 @@ def compare_models_chinese():
     print("=" * 60)
     
     models = [
-        ("qwen-turbo", "通义千问 Turbo"),
-        ("qwen-plus", "通义千问 Plus"),
-        ("qwen-max", "通义千问 Max")
+        ("qwen-turbo-latest", "通义千问 Turbo"),
+        ("qwen-plus-latest", "通义千问 Plus"),
+        ("qwen-max-latest", "通义千问 Max")
     ]
     
     question = "请用一段话总结苹果公司当前的投资价值，包括优势和风险。"
@@ -171,7 +171,7 @@ def compare_models_chinese():
 def main():
     """主函数"""
     # 进行完整的股票分析
-    result = analyze_stock_with_chinese_output("AAPL", "2024-05-10")
+    result = analyze_stock_with_chinese_output("601600", "2025-07-12")
     
     # 比较不同模型
     compare_models_chinese()

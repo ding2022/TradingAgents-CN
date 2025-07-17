@@ -130,40 +130,40 @@ def run_stock_analysis(stock_symbol, analysis_date, analysts, research_depth, ll
             config["memory_enabled"] = False  # 禁用记忆功能加速
             config["online_tools"] = False  # 使用缓存数据加速
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-turbo"  # 使用最快模型
-                config["deep_think_llm"] = "qwen-plus"
+                config["quick_think_llm"] = "qwen-turbo-latest"  # 使用最快模型
+                config["deep_think_llm"] = "qwen-plus-latest"
         elif research_depth == 2:  # 2级 - 基础分析
             config["max_debate_rounds"] = 1
             config["max_risk_discuss_rounds"] = 1
             config["memory_enabled"] = True
             config["online_tools"] = True
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-plus"
-                config["deep_think_llm"] = "qwen-plus"
+                config["quick_think_llm"] = "qwen-plus-latest"
+                config["deep_think_llm"] = "qwen-plus-latest"
         elif research_depth == 3:  # 3级 - 标准分析 (默认)
             config["max_debate_rounds"] = 1
             config["max_risk_discuss_rounds"] = 2
             config["memory_enabled"] = True
             config["online_tools"] = True
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-plus"
-                config["deep_think_llm"] = "qwen-max"
+                config["quick_think_llm"] = "qwen-plus-latest"
+                config["deep_think_llm"] = "qwen-max-latest"
         elif research_depth == 4:  # 4级 - 深度分析
             config["max_debate_rounds"] = 2
             config["max_risk_discuss_rounds"] = 2
             config["memory_enabled"] = True
             config["online_tools"] = True
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-plus"
-                config["deep_think_llm"] = "qwen-max"
+                config["quick_think_llm"] = "qwen-plus-latest"
+                config["deep_think_llm"] = "qwen-max-latest"
         else:  # 5级 - 全面分析
             config["max_debate_rounds"] = 3
             config["max_risk_discuss_rounds"] = 3
             config["memory_enabled"] = True
             config["online_tools"] = True
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-max"
-                config["deep_think_llm"] = "qwen-max"
+                config["quick_think_llm"] = "qwen-max-latest"
+                config["deep_think_llm"] = "qwen-max-latest"
 
         # 根据LLM提供商设置不同的配置
         if llm_provider == "dashscope":

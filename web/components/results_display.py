@@ -65,9 +65,9 @@ def render_analysis_info(results):
             llm_model = results.get('llm_model', 'N/A')
             print(f"🔍 [DEBUG] llm_model from results: {llm_model}")
             model_display = {
-                'qwen-turbo': 'Qwen Turbo',
-                'qwen-plus': 'Qwen Plus',
-                'qwen-max': 'Qwen Max',
+                'qwen-turbo-latest': 'Qwen Turbo',
+                'qwen-plus-latest': 'Qwen Plus',
+                'qwen-max-latest': 'Qwen Max',
                 'gemini-2.0-flash': 'Gemini 2.0 Flash',
                 'gemini-1.5-pro': 'Gemini 1.5 Pro',
                 'gemini-1.5-flash': 'Gemini 1.5 Flash'

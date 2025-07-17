@@ -99,7 +99,7 @@ class TradingAgentsGraph:
             # 确保使用正确的通义千问模型名称
             quick_model = self.config["quick_think_llm"]
             if quick_model in ["gpt-4o-mini", "o4-mini"]:  # 如果还是默认的OpenAI模型名
-                quick_model = "qwen-turbo"  # 使用通义千问默认模型
+                quick_model = "qwen-turbo-latest"  # 使用通义千问默认模型
             self.react_llm.model_name = quick_model
             print(f"📊 [DEBUG] ReAct LLM模型设置为: {quick_model}")
         else:

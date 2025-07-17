@@ -46,8 +46,8 @@ def test_graph_initialization():
         # 创建配置
         config = DEFAULT_CONFIG.copy()
         config["llm_provider"] = "dashscope"
-        config["deep_think_llm"] = "qwen-plus"
-        config["quick_think_llm"] = "qwen-plus"
+        config["deep_think_llm"] = "qwen-plus-latest"
+        config["quick_think_llm"] = "qwen-plus-latest"
         config["memory_enabled"] = True
         config["online_tools"] = True
         

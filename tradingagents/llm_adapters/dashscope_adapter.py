@@ -21,7 +21,7 @@ class ChatDashScope(BaseChatModel):
     """阿里百炼大模型的 LangChain 适配器"""
     
     # 模型配置
-    model: str = Field(default="qwen-turbo", description="DashScope 模型名称")
+    model: str = Field(default="qwen-turbo-latest", description="DashScope 模型名称")
     api_key: Optional[SecretStr] = Field(default=None, description="DashScope API 密钥")
     temperature: float = Field(default=0.1, description="生成温度")
     max_tokens: int = Field(default=2000, description="最大生成token数")
@@ -201,22 +201,22 @@ class ChatDashScope(BaseChatModel):
 # 支持的模型列表
 DASHSCOPE_MODELS = {
     # 通义千问系列
-    "qwen-turbo": {
+    "qwen-turbo-latest": {
         "description": "通义千问 Turbo - 快速响应，适合日常对话",
         "context_length": 8192,
         "recommended_for": ["快速任务", "日常对话", "简单分析"]
     },
-    "qwen-plus": {
+    "qwen-plus-latest": {
         "description": "通义千问 Plus - 平衡性能和成本",
         "context_length": 32768,
         "recommended_for": ["复杂分析", "专业任务", "深度思考"]
     },
-    "qwen-max": {
+    "qwen-max-latest": {
         "description": "通义千问 Max - 最强性能",
         "context_length": 32768,
         "recommended_for": ["最复杂任务", "专业分析", "高质量输出"]
     },
-    "qwen-max-longcontext": {
+    "qwen-long-latest": {
         "description": "通义千问 Max 长文本版 - 支持超长上下文",
         "context_length": 1000000,
         "recommended_for": ["长文档分析", "大量数据处理", "复杂推理"]
@@ -230,7 +230,7 @@ def get_available_models() -> Dict[str, Dict[str, Any]]:
 
 
 def create_dashscope_llm(
-    model: str = "qwen-plus",
+    model: str = "qwen-plus-latest",
     api_key: Optional[str] = None,
     temperature: float = 0.1,
     max_tokens: int = 2000,

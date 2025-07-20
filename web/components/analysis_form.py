@@ -27,14 +27,14 @@ def render_analysis_form():
             if market_type == "美股":
                 stock_symbol = st.text_input(
                     "股票代码 📈",
-                    value="AAPL",
+                    value="",
                     placeholder="输入美股代码，如 AAPL, TSLA, MSFT",
                     help="输入要分析的美股代码"
                 ).upper().strip()
             else:  # A股
                 stock_symbol = st.text_input(
                     "股票代码 📈",
-                    value="000001",
+                    value="",
                     placeholder="输入A股代码，如 000001, 600519",
                     help="输入要分析的A股代码，如 000001(平安银行), 600519(贵州茅台)"
                 ).strip()

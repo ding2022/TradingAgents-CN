@@ -24,7 +24,7 @@ def test_dashscope_technical_analysis():
         
         # 创建阿里百炼模型
         llm = ChatDashScope(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=2000
         )
@@ -164,7 +164,7 @@ def test_message_sequence_handling():
         
         # 创建阿里百炼模型
         llm = ChatDashScope(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=2000
         )
@@ -245,7 +245,7 @@ def test_max_tokens_impact():
             print(f"\n🔄 测试max_tokens={max_tokens}...")
             
             llm = ChatDashScope(
-                model="qwen-plus-2025-09-11",
+                model="deepseek-v3.2-exp",
                 temperature=0.1,
                 max_tokens=max_tokens
             )

@@ -31,7 +31,7 @@ def test_basic_tool_calling():
         
         # 创建LLM
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=500
         )
@@ -95,7 +95,7 @@ def test_stock_analysis_tool_calling():
         
         # 创建LLM
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.0,  # 降低温度提高确定性
             max_tokens=1000
         )
@@ -193,7 +193,7 @@ def test_parameter_optimization():
             
             try:
                 llm = ChatDashScopeOpenAI(
-                    model="qwen-plus-2025-09-11",
+                    model="deepseek-v3.2-exp",
                     temperature=config["temperature"],
                     max_tokens=config["max_tokens"]
                 )
@@ -239,8 +239,8 @@ def test_model_comparison():
         # 测试不同模型
         models = [
             "qwen-turbo-2025-07-15",
-            "qwen-plus-2025-09-11",
-            "qwen-plus-2025-09-11",
+            "deepseek-v3.2-exp",
+            "deepseek-v3.2-exp",
             "qwen3-max-latest"
         ]
         

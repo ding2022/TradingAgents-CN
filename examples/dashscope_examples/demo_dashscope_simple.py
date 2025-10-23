@@ -44,7 +44,7 @@ def test_simple_llm():
         
         # 创建模型实例
         llm = ChatDashScope(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=1000
         )
@@ -95,7 +95,7 @@ def test_multiple_models():
     
     models = [
         ("qwen-turbo-2025-07-15", "通义千问 Turbo - 快速响应"),
-        ("qwen-plus-2025-09-11", "通义千问 Plus - 平衡性能"),
+        ("deepseek-v3.2-exp", "通义千问 Plus - 平衡性能"),
         ("qwen3-max", "通义千问 Max - 最强性能")
     ]
     

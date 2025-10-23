@@ -102,7 +102,7 @@ def test_dashscope_market_analyst():
         
         # 创建百炼LLM
         dashscope_llm = ChatDashScope(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=2000
         )

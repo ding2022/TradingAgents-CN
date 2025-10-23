@@ -169,7 +169,7 @@ config_manager.save_pricing(pricing_list)
 | 模型 | 输入价格 (¥/1K tokens) | 输出价格 (¥/1K tokens) |
 |------|----------------------|----------------------|
 | qwen-turbo-2025-07-15 | 0.002 | 0.006 |
-| qwen-plus-2025-09-11 | 0.004 | 0.012 |
+| deepseek-v3.2-exp | 0.004 | 0.012 |
 | qwen3-max | 0.02 | 0.06 |
 
 ### OpenAI

@@ -32,7 +32,7 @@ def test_news_analyst_with_google():
         config["llm_provider"] = "dashscope"
         
         # 创建LLM和工具包
-        llm = ChatDashScope(model="qwen-plus-2025-09-11", temperature=0.1)
+        llm = ChatDashScope(model="deepseek-v3.2-exp", temperature=0.1)
         toolkit = Toolkit(config=config)
         
         print("✅ 组件创建成功")
@@ -94,7 +94,7 @@ def test_social_analyst_with_reddit():
         config["llm_provider"] = "dashscope"
         
         # 创建LLM和工具包
-        llm = ChatDashScope(model="qwen-plus-2025-09-11", temperature=0.1)
+        llm = ChatDashScope(model="deepseek-v3.2-exp", temperature=0.1)
         toolkit = Toolkit(config=config)
         
         print("✅ 组件创建成功")

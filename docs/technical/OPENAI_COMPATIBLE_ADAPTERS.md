@@ -149,7 +149,7 @@ from tradingagents.llm_adapters import ChatDashScopeOpenAI
 
 # 创建适配器
 llm = ChatDashScopeOpenAI(
-    model="qwen-plus-2025-09-11",
+    model="deepseek-v3.2-exp",
     temperature=0.1,
     max_tokens=2000
 )
@@ -211,7 +211,7 @@ success = test_dashscope_openai_connection(model="qwen-turbo-2025-07-15")
 from tradingagents.llm_adapters.dashscope_openai_adapter import test_dashscope_openai_function_calling
 
 # 测试Function Calling
-success = test_dashscope_openai_function_calling(model="qwen-plus-2025-09-11")
+success = test_dashscope_openai_function_calling(model="deepseek-v3.2-exp")
 ```
 
 ### 3. 完整功能测试
@@ -260,7 +260,7 @@ class EnhancedDashScopeAdapter(ChatDashScopeOpenAI):
 
 ### 1. 模型选择
 - **快速任务**: qwen-turbo-2025-07-15
-- **复杂分析**: qwen-plus-2025-09-11
+- **复杂分析**: deepseek-v3.2-exp
 - **最高质量**: qwen3-max-latest
 
 ### 2. 参数调优

@@ -121,7 +121,7 @@ class FinancialSituationMemory:
         self.fallback_available = False
         
         if self.llm_provider == "dashscope" or self.llm_provider == "alibaba":
-            self.embedding = "text-embedding-v3"
+            self.embedding = "text-embedding-v4"
             self.client = None  # DashScope不需要OpenAI客户端
 
             # 设置DashScope API密钥
@@ -165,7 +165,7 @@ class FinancialSituationMemory:
                     from dashscope import TextEmbedding
 
                     dashscope.api_key = dashscope_key
-                    self.embedding = "text-embedding-v3"
+                    self.embedding = "text-embedding-v4"
                     self.client = None
                     logger.info(f"💡 千帆使用阿里百炼嵌入服务")
                 except ImportError as e:
@@ -196,7 +196,7 @@ class FinancialSituationMemory:
 
                         dashscope.api_key = dashscope_key
                         # 验证TextEmbedding可用性（不需要实际调用）
-                        self.embedding = "text-embedding-v3"
+                        self.embedding = "text-embedding-v4"
                         self.client = None
                         logger.info(f"💡 DeepSeek使用阿里百炼嵌入服务")
                     except ImportError as e:
@@ -248,7 +248,7 @@ class FinancialSituationMemory:
                     import dashscope
                     from dashscope import TextEmbedding
 
-                    self.embedding = "text-embedding-v3"
+                    self.embedding = "text-embedding-v4"
                     self.client = None
                     dashscope.api_key = dashscope_key
                     
@@ -285,7 +285,7 @@ class FinancialSituationMemory:
                     import dashscope
                     from dashscope import TextEmbedding
 
-                    self.embedding = "text-embedding-v3"
+                    self.embedding = "text-embedding-v4"
                     self.client = None
                     dashscope.api_key = dashscope_key
                     logger.info(f"💡 OpenRouter使用阿里百炼嵌入服务")

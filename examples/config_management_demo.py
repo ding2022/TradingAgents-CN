@@ -33,7 +33,7 @@ def demo_model_management():
         logger.info(f"     最大Token: {model.max_tokens}, 温度: {model.temperature}")
     
     # 获取特定模型配置
-    qwen_model = config_manager.get_model_by_name("dashscope", "qwen-plus-2025-09-11")
+    qwen_model = config_manager.get_model_by_name("dashscope", "deepseek-v3.2-exp")
     if qwen_model:
         logger.info(f"\n🎯 通义千问Plus配置:")
         logger.info(f"  API密钥: {'已配置' if qwen_model.api_key else '未配置'}")
@@ -49,7 +49,7 @@ def demo_cost_calculation():
     # 测试不同模型的成本
     test_cases = [
         ("dashscope", "qwen-turbo-2025-07-15", 1000, 500, "快速分析"),
-        ("dashscope", "qwen-plus-2025-09-11", 2000, 1000, "标准分析"),
+        ("dashscope", "deepseek-v3.2-exp", 2000, 1000, "标准分析"),
         ("dashscope", "qwen3-max", 3000, 1500, "深度分析"),
         ("openai", "gpt-3.5-turbo", 1000, 500, "GPT-3.5分析"),
         ("google", "gemini-pro", 1000, 500, "Gemini分析"),
@@ -82,7 +82,7 @@ def demo_usage_tracking():
         },
         {
             "provider": "dashscope", 
-            "model": "qwen-plus-2025-09-11",
+            "model": "deepseek-v3.2-exp",
             "input_tokens": 2500,
             "output_tokens": 1200,
             "analysis_type": "A股_analysis",
@@ -177,7 +177,7 @@ def demo_cost_estimation():
     
     models_to_test = [
         ("dashscope", "qwen-turbo-2025-07-15"),
-        ("dashscope", "qwen-plus-2025-09-11"),
+        ("dashscope", "deepseek-v3.2-exp"),
         ("openai", "gpt-3.5-turbo"),
         ("google", "gemini-pro")
     ]

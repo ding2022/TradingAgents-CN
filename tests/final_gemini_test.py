@@ -170,7 +170,7 @@ def main():
         print("\n🎉 最终推荐配置:")
         print("   LLM提供商: Google")
         print("   模型名称: gemini-2.0-flash")
-        print("   嵌入服务: 阿里百炼 (text-embedding-v3)")
+        print("   嵌入服务: 阿里百炼 (text-embedding-v4)")
         print("   内存功能: 启用")
         print("\n💡 优势总结:")
         print("   🧠 优秀的推理能力")

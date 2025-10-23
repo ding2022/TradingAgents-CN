@@ -72,7 +72,7 @@ def test_openai_adapter_function_calling():
         from tradingagents.llm_adapters.dashscope_openai_adapter import test_dashscope_openai_function_calling
         
         # 测试 Function Calling
-        result = test_dashscope_openai_function_calling(model="qwen-plus-2025-09-11")
+        result = test_dashscope_openai_function_calling(model="deepseek-v3.2-exp")
         
         if result:
             print("✅ OpenAI 兼容适配器 Function Calling 测试成功")
@@ -101,7 +101,7 @@ def test_technical_analysis_with_new_adapter():
         
         # 创建新的 OpenAI 兼容适配器
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=2000
         )
@@ -199,7 +199,7 @@ def test_trading_graph_integration():
         # 创建配置
         config = {
             "llm_provider": "dashscope",
-            "deep_think_llm": "qwen-plus-2025-09-11",
+            "deep_think_llm": "deepseek-v3.2-exp",
             "quick_think_llm": "qwen-turbo-2025-07-15",
             "max_debate_rounds": 1,
             "online_tools": True,

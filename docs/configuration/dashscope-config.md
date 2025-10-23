@@ -94,7 +94,7 @@ python demo_dashscope.py
 | 模型名称 | 模型ID | 特点 | 适用场景 |
 |---------|--------|------|----------|
 | **通义千问 Turbo** | `qwen-turbo-2025-07-15` | 快速响应，成本低 | 快速任务、日常对话 |
-| **通义千问 Plus** | `qwen-plus-2025-09-11` | 平衡性能和成本 | 复杂分析、专业任务 |
+| **通义千问 Plus** | `deepseek-v3.2-exp` | 平衡性能和成本 | 复杂分析、专业任务 |
 | **通义千问 Max** | `qwen3-max` | 最强性能 | 最复杂任务、高质量输出 |
 | **通义千问 Max 长文本** | `qwen3-max-longcontext` | 超长上下文 | 长文档分析、大量数据处理 |
 
@@ -104,7 +104,7 @@ python demo_dashscope.py
 ```python
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-plus-2025-09-11",      # 深度思考使用Plus
+    "deep_think_llm": "deepseek-v3.2-exp",      # 深度思考使用Plus
     "quick_think_llm": "qwen-turbo-2025-07-15",    # 快速任务使用Turbo
     "max_debate_rounds": 1,             # 减少辩论轮次
 }
@@ -115,7 +115,7 @@ config = {
 config = {
     "llm_provider": "dashscope", 
     "deep_think_llm": "qwen3-max",       # 深度思考使用Max
-    "quick_think_llm": "qwen-plus-2025-09-11",     # 快速任务使用Plus
+    "quick_think_llm": "deepseek-v3.2-exp",     # 快速任务使用Plus
     "max_debate_rounds": 2,             # 增加辩论轮次
 }
 ```
@@ -125,7 +125,7 @@ config = {
 config = {
     "llm_provider": "dashscope",
     "deep_think_llm": "qwen3-max-longcontext",  # 使用长文本版本
-    "quick_think_llm": "qwen-plus-2025-09-11",
+    "quick_think_llm": "deepseek-v3.2-exp",
     "max_debate_rounds": 1,
 }
 ```
@@ -140,7 +140,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 # 创建阿里百炼配置
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "dashscope"
-config["deep_think_llm"] = "qwen-plus-2025-09-11"
+config["deep_think_llm"] = "deepseek-v3.2-exp"
 config["quick_think_llm"] = "qwen-turbo-2025-07-15"
 
 # 初始化
@@ -158,7 +158,7 @@ config = DEFAULT_CONFIG.copy()
 config.update({
     "llm_provider": "dashscope",
     "deep_think_llm": "qwen3-max",
-    "quick_think_llm": "qwen-plus-2025-09-11",
+    "quick_think_llm": "deepseek-v3.2-exp",
     "max_debate_rounds": 2,
     "max_risk_discuss_rounds": 2,
     "online_tools": True,
@@ -282,7 +282,7 @@ ChatDashScopeOpenAI -> ChatOpenAI -> BaseChatModel
 # 推荐配置
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-plus-2025-09-11",  # 复杂分析
+    "deep_think_llm": "deepseek-v3.2-exp",  # 复杂分析
     "quick_think_llm": "qwen-turbo-2025-07-15",       # 快速响应
 }
 ```
@@ -291,7 +291,7 @@ config = {
 ```python
 # 最佳参数设置
 llm = ChatDashScopeOpenAI(
-    model="qwen-plus-2025-09-11",
+    model="deepseek-v3.2-exp",
     temperature=0.1,        # 降低随机性
     max_tokens=2000,        # 确保完整输出
 )

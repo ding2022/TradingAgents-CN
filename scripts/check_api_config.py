@@ -45,7 +45,7 @@ def check_dashscope_config():
         dashscope.api_key = api_key
         
         response = TextEmbedding.call(
-            model="text-embedding-v3",
+            model="text-embedding-v4",
             input="测试文本"
         )
         

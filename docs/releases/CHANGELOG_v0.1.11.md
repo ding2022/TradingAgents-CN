@@ -15,7 +15,7 @@
 #### 支持的提供商
 - **DashScope (阿里百炼)**
   - qwen-turbo-2025-07-15: 快速响应
-  - qwen-plus-2025-09-11: 平衡性能
+  - deepseek-v3.2-exp: 平衡性能
   - qwen3-max: 最强性能
 
 - **DeepSeek V3**

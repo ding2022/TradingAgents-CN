@@ -966,7 +966,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 # 配置阿里百炼
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "dashscope"
-config["deep_think_llm"] = "qwen-plus-2025-09-11"      # 深度分析
+config["deep_think_llm"] = "deepseek-v3.2-exp"      # 深度分析
 config["quick_think_llm"] = "qwen-turbo-2025-07-15"    # 快速任务
 
 # 创建交易智能体

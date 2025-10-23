@@ -237,7 +237,7 @@ def test_comprehensive_tool_calling():
         
         # 创建适配器并绑定工具
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=500
         )

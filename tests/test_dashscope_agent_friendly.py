@@ -125,7 +125,7 @@ def main():
         flush_print("\n🔧 测试6: 不同模型测试")
         flush_print("-" * 40)
         
-        models = ["qwen-turbo-2025-07-15", "qwen-plus-2025-09-11"]
+        models = ["qwen-turbo-2025-07-15", "deepseek-v3.2-exp"]
         
         for model in models:
             flush_print(f"\n   测试模型: {model}")

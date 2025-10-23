@@ -99,7 +99,7 @@ def init_mongodb():
                 "config_value": {
                     "default_provider": "dashscope",
                     "models": {
-                        "dashscope": "qwen-plus-2025-09-11",
+                        "dashscope": "deepseek-v3.2-exp",
                         "openai": "gpt-4o-mini",
                         "google": "gemini-pro"
                     }

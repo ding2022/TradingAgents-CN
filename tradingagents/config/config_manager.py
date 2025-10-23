@@ -190,7 +190,7 @@ class ConfigManager:
                 ),
                 ModelConfig(
                     provider="dashscope",
-                    model_name="qwen-plus-2025-09-11",
+                    model_name="deepseek-v3.2-exp",
                     api_key="",
                     max_tokens=8000,
                     temperature=0.7
@@ -235,7 +235,7 @@ class ConfigManager:
             default_pricing = [
                 # 阿里百炼定价 (人民币)
                 PricingConfig("dashscope", "qwen-turbo-2025-07-15", 0.002, 0.006, "CNY"),
-                PricingConfig("dashscope", "qwen-plus-2025-09-11", 0.004, 0.012, "CNY"),
+                PricingConfig("dashscope", "deepseek-v3.2-exp", 0.004, 0.012, "CNY"),
                 PricingConfig("dashscope", "qwen3-max", 0.02, 0.06, "CNY"),
 
                 # DeepSeek定价 (人民币) - 2025年最新价格

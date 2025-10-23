@@ -60,7 +60,7 @@ python -m streamlit run web/app.py
 
 | 供应商 | 模型示例 | 货币 | 说明 |
 |--------|----------|------|------|
-| **阿里百炼** | qwen-turbo-2025-07-15, qwen-plus-2025-09-11, qwen3-max | CNY | 国产模型，推荐使用 |
+| **阿里百炼** | qwen-turbo-2025-07-15, deepseek-v3.2-exp, qwen3-max | CNY | 国产模型，推荐使用 |
 | **OpenAI** | gpt-3.5-turbo, gpt-4, gpt-4-turbo | USD | 国际领先模型 |
 | **Google** | gemini-pro, gemini-pro-vision | USD | Google最新模型 |
 | **Anthropic** | claude-3-sonnet, claude-3-opus | USD | 高质量对话模型 |
@@ -72,7 +72,7 @@ python -m streamlit run web/app.py
 1. 进入 **"模型配置"** 页面
 2. 在 **"添加新模型"** 部分填写：
    - **供应商**: 选择模型提供商
-   - **模型名称**: 输入具体模型名（如 qwen-plus-2025-09-11）
+   - **模型名称**: 输入具体模型名（如 deepseek-v3.2-exp）
    - **API密钥**: 输入您的API密钥
    - **最大Token数**: 设置输出限制（1000-32000）
    - **温度参数**: 控制输出随机性（0.0-2.0）
@@ -91,7 +91,7 @@ python -m streamlit run web/app.py
 ```json
 {
   "provider": "dashscope",
-  "model_name": "qwen-plus-2025-09-11",
+  "model_name": "deepseek-v3.2-exp",
   "api_key": "sk-your-api-key-here",
   "max_tokens": 4000,
   "temperature": 0.7,
@@ -214,7 +214,7 @@ python -m streamlit run web/app.py
 {
     "timestamp": "2025-06-28T10:30:00",
     "provider": "dashscope",
-    "model_name": "qwen-plus-2025-09-11",
+    "model_name": "deepseek-v3.2-exp",
     "input_tokens": 2500,
     "output_tokens": 1200,
     "cost": 0.024,

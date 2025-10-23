@@ -93,7 +93,7 @@ def test_cost_calculation():
         print("🌟 测试百炼成本计算:")
         dashscope_cost1 = config_manager.calculate_cost(
             provider="dashscope",
-            model_name="qwen-plus-2025-09-11",
+            model_name="deepseek-v3.2-exp",
             input_tokens=1000,
             output_tokens=500
         )
@@ -101,11 +101,11 @@ def test_cost_calculation():
         
         dashscope_cost2 = config_manager.calculate_cost(
             provider="dashscope",
-            model_name="qwen-plus-2025-09-11",
+            model_name="deepseek-v3.2-exp",
             input_tokens=1000,
             output_tokens=500
         )
-        print(f"   qwen-plus-2025-09-11成本: ¥{dashscope_cost2:.6f}")
+        print(f"   deepseek-v3.2-exp成本: ¥{dashscope_cost2:.6f}")
         
         return True
         

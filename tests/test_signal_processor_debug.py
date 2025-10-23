@@ -17,7 +17,7 @@ def test_signal_processor():
         
         # 创建LLM实例
         llm = ChatDashScope(
-            model="qwen-plus-2025-09-11",
+            model="deepseek-v3.2-exp",
             temperature=0.1,
             max_tokens=1000
         )
@@ -78,8 +78,8 @@ def test_trading_graph():
         # 创建配置
         config = DEFAULT_CONFIG.copy()
         config['llm_provider'] = '阿里百炼'
-        config['quick_think_llm'] = 'qwen-plus-2025-09-11'
-        config['deep_think_llm'] = 'qwen-plus-2025-09-11'
+        config['quick_think_llm'] = 'deepseek-v3.2-exp'
+        config['deep_think_llm'] = 'deepseek-v3.2-exp'
         
         print(f"📊 配置信息:")
         print(f"  LLM提供商: {config['llm_provider']}")

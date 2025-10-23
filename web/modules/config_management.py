@@ -143,7 +143,7 @@ def render_model_config():
     
     with col1:
         new_provider = st.selectbox("供应商", ["dashscope", "openai", "google", "anthropic", "other"], key="new_provider")
-        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus-2025-09-11", key="new_model_name")
+        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, deepseek-v3.2-exp", key="new_model_name")
         new_api_key = st.text_input("API密钥", type="password", key="new_api_key")
 
     with col2:
@@ -245,7 +245,7 @@ def render_pricing_config():
     
     with col1:
         new_provider = st.text_input("供应商", placeholder="例如: openai, dashscope", key="new_pricing_provider")
-        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus-2025-09-11", key="new_pricing_model")
+        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, deepseek-v3.2-exp", key="new_pricing_model")
         new_currency = st.selectbox("货币", ["CNY", "USD", "EUR"], key="new_pricing_currency")
 
     with col2:

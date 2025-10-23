@@ -118,7 +118,7 @@ def test_trading_graph_config():
         # 创建阿里百炼配置
         config = DEFAULT_CONFIG.copy()
         config["llm_provider"] = "dashscope"
-        config["deep_think_llm"] = "qwen-plus-2025-09-11"
+        config["deep_think_llm"] = "deepseek-v3.2-exp"
         config["quick_think_llm"] = "qwen-turbo-2025-07-15"
         
         # 尝试初始化（不运行分析）

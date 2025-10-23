@@ -96,13 +96,13 @@ DASHSCOPE_OPENAI_MODELS = {
         "supports_function_calling": True,
         "recommended_for": ["快速任务", "日常对话", "简单分析"]
     },
-    "qwen-plus-2025-09-11": {
+    "deepseek-v3.2-exp": {
         "description": "通义千问 Plus - 平衡性能和成本",
         "context_length": 32768,
         "supports_function_calling": True,
         "recommended_for": ["复杂分析", "专业任务", "深度思考"]
     },
-    "qwen-plus-2025-09-11": {
+    "deepseek-v3.2-exp": {
         "description": "通义千问 Plus 最新版 - 最新功能和性能",
         "context_length": 32768,
         "supports_function_calling": True,
@@ -135,7 +135,7 @@ def get_available_openai_models() -> Dict[str, Dict[str, Any]]:
 
 
 def create_dashscope_openai_llm(
-    model: str = "qwen-plus-2025-09-11",
+    model: str = "deepseek-v3.2-exp",
     api_key: Optional[str] = None,
     temperature: float = 0.1,
     max_tokens: int = 2000,
@@ -186,7 +186,7 @@ def test_dashscope_openai_connection(
 
 
 def test_dashscope_openai_function_calling(
-    model: str = "qwen-plus-2025-09-11",
+    model: str = "deepseek-v3.2-exp",
     api_key: Optional[str] = None
 ) -> bool:
     """测试 DashScope OpenAI 兼容接口的 Function Calling"""

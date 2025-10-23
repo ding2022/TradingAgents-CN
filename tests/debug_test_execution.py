@@ -122,7 +122,7 @@ def step5_simple_llm_test():
         
         print("🔄 创建LLM实例...")
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=50
         )
@@ -157,7 +157,7 @@ def step6_tool_binding_test():
             return f"工具返回: {text}"
         
         print("🔄 创建LLM并绑定工具...")
-        llm = ChatDashScopeOpenAI(model="qwen-turbo", max_tokens=50)
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15", max_tokens=50)
         llm_with_tools = llm.bind_tools([test_tool])
         print("✅ 工具绑定成功")
         
@@ -190,7 +190,7 @@ def step7_actual_call_test():
             return f"工具返回: {text}"
         
         print("🔄 创建LLM并绑定工具...")
-        llm = ChatDashScopeOpenAI(model="qwen-turbo", max_tokens=100)
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15", max_tokens=100)
         llm_with_tools = llm.bind_tools([test_tool])
         
         print("🔄 发送测试请求...")

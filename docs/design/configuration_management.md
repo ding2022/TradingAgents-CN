@@ -91,7 +91,7 @@ DEFAULT_CONFIG = {
                 "timeout": 60
             },
             "qwen": {
-                "model_name": "qwen-plus-latest",
+                "model_name": "qwen-plus-2025-09-11",
                 "temperature": 0.1,
                 "max_tokens": 4000,
                 "timeout": 60

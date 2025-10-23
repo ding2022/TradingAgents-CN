@@ -93,10 +93,10 @@ python demo_dashscope.py
 
 | 模型名称 | 模型ID | 特点 | 适用场景 |
 |---------|--------|------|----------|
-| **通义千问 Turbo** | `qwen-turbo` | 快速响应，成本低 | 快速任务、日常对话 |
-| **通义千问 Plus** | `qwen-plus-latest` | 平衡性能和成本 | 复杂分析、专业任务 |
-| **通义千问 Max** | `qwen-max` | 最强性能 | 最复杂任务、高质量输出 |
-| **通义千问 Max 长文本** | `qwen-max-longcontext` | 超长上下文 | 长文档分析、大量数据处理 |
+| **通义千问 Turbo** | `qwen-turbo-2025-07-15` | 快速响应，成本低 | 快速任务、日常对话 |
+| **通义千问 Plus** | `qwen-plus-2025-09-11` | 平衡性能和成本 | 复杂分析、专业任务 |
+| **通义千问 Max** | `qwen3-max` | 最强性能 | 最复杂任务、高质量输出 |
+| **通义千问 Max 长文本** | `qwen3-max-longcontext` | 超长上下文 | 长文档分析、大量数据处理 |
 
 ### 推荐配置
 
@@ -104,8 +104,8 @@ python demo_dashscope.py
 ```python
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-plus-latest",      # 深度思考使用Plus
-    "quick_think_llm": "qwen-turbo",    # 快速任务使用Turbo
+    "deep_think_llm": "qwen-plus-2025-09-11",      # 深度思考使用Plus
+    "quick_think_llm": "qwen-turbo-2025-07-15",    # 快速任务使用Turbo
     "max_debate_rounds": 1,             # 减少辩论轮次
 }
 ```
@@ -114,7 +114,7 @@ config = {
 ```python
 config = {
     "llm_provider": "dashscope", 
-    "deep_think_llm": "qwen-max",       # 深度思考使用Max
+    "deep_think_llm": "qwen3-max",       # 深度思考使用Max
     "quick_think_llm": "qwen-plus",     # 快速任务使用Plus
     "max_debate_rounds": 2,             # 增加辩论轮次
 }
@@ -124,7 +124,7 @@ config = {
 ```python
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-max-longcontext",  # 使用长文本版本
+    "deep_think_llm": "qwen3-max-longcontext",  # 使用长文本版本
     "quick_think_llm": "qwen-plus",
     "max_debate_rounds": 1,
 }
@@ -140,8 +140,8 @@ from tradingagents.default_config import DEFAULT_CONFIG
 # 创建阿里百炼配置
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "dashscope"
-config["deep_think_llm"] = "qwen-plus-latest"
-config["quick_think_llm"] = "qwen-turbo"
+config["deep_think_llm"] = "qwen-plus-2025-09-11"
+config["quick_think_llm"] = "qwen-turbo-2025-07-15"
 
 # 初始化
 ta = TradingAgentsGraph(debug=True, config=config)
@@ -157,8 +157,8 @@ print(decision)
 config = DEFAULT_CONFIG.copy()
 config.update({
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-max",
-    "quick_think_llm": "qwen-plus-latest",
+    "deep_think_llm": "qwen3-max",
+    "quick_think_llm": "qwen-plus-2025-09-11",
     "max_debate_rounds": 2,
     "max_risk_discuss_rounds": 2,
     "online_tools": True,
@@ -168,7 +168,7 @@ config.update({
 from tradingagents.llm_adapters import ChatDashScope
 
 custom_llm = ChatDashScope(
-    model="qwen-max",
+    model="qwen3-max",
     temperature=0.1,
     max_tokens=3000,
     top_p=0.9
@@ -178,9 +178,9 @@ custom_llm = ChatDashScope(
 ## 成本控制
 
 ### 典型使用成本
-- **经济模式**: ¥0.01-0.05/次分析 (使用 qwen-turbo)
+- **经济模式**: ¥0.01-0.05/次分析 (使用 qwen-turbo-2025-07-15)
 - **标准模式**: ¥0.05-0.15/次分析 (使用 qwen-plus)
-- **高精度模式**: ¥0.10-0.30/次分析 (使用 qwen-max)
+- **高精度模式**: ¥0.10-0.30/次分析 (使用 qwen3-max)
 
 ### 成本优化建议
 1. **合理选择模型**: 根据任务复杂度选择合适的模型
@@ -230,7 +230,7 @@ Error: Model not found
    
    from dashscope import Generation
    response = Generation.call(
-       model="qwen-turbo",
+       model="qwen-turbo-2025-07-15",
        messages=[{"role": "user", "content": "Hello"}]
    )
    print(response)
@@ -282,8 +282,8 @@ ChatDashScopeOpenAI -> ChatOpenAI -> BaseChatModel
 # 推荐配置
 config = {
     "llm_provider": "dashscope",
-    "deep_think_llm": "qwen-plus-latest",  # 复杂分析
-    "quick_think_llm": "qwen-turbo",       # 快速响应
+    "deep_think_llm": "qwen-plus-2025-09-11",  # 复杂分析
+    "quick_think_llm": "qwen-turbo-2025-07-15",       # 快速响应
 }
 ```
 
@@ -291,7 +291,7 @@ config = {
 ```python
 # 最佳参数设置
 llm = ChatDashScopeOpenAI(
-    model="qwen-plus-latest",
+    model="qwen-plus-2025-09-11",
     temperature=0.1,        # 降低随机性
     max_tokens=2000,        # 确保完整输出
 )
@@ -313,7 +313,7 @@ class CustomDashScopeAdapter(OpenAICompatibleBase):
     def __init__(self, **kwargs):
         super().__init__(
             provider_name="custom_dashscope",
-            model=kwargs.get("model", "qwen-turbo"),
+            model=kwargs.get("model", "qwen-turbo-2025-07-15"),
             api_key_env_var="DASHSCOPE_API_KEY",
             base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
             **kwargs
@@ -330,7 +330,7 @@ def test_tool(query: str) -> str:
     """测试工具"""
     return f"查询结果: {query}"
 
-llm = ChatDashScopeOpenAI(model="qwen-turbo")
+llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
 llm_with_tools = llm.bind_tools([test_tool])
 
 # 测试工具调用

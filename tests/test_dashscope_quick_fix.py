@@ -22,7 +22,7 @@ def test_adapter_creation():
         
         # 创建适配器（不调用API）
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=100
         )
@@ -54,7 +54,7 @@ def test_tool_binding_basic():
             return f"工具返回: {text}"
         
         # 创建LLM
-        llm = ChatDashScopeOpenAI(model="qwen-turbo", max_tokens=50)
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15", max_tokens=50)
         
         # 绑定工具
         llm_with_tools = llm.bind_tools([simple_tool])
@@ -78,11 +78,11 @@ def test_vs_old_adapter():
         from tradingagents.llm_adapters import ChatDashScope, ChatDashScopeOpenAI
         
         print("🔄 测试旧适配器...")
-        old_llm = ChatDashScope(model="qwen-turbo")
+        old_llm = ChatDashScope(model="qwen-turbo-2025-07-15")
         print(f"   旧适配器类型: {type(old_llm).__name__}")
         
         print("🔄 测试新适配器...")
-        new_llm = ChatDashScopeOpenAI(model="qwen-turbo")
+        new_llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
         print(f"   新适配器类型: {type(new_llm).__name__}")
         
         # 检查继承关系
@@ -175,7 +175,7 @@ def test_technical_analysis_simulation():
 """
         
         # 创建LLM并绑定工具
-        llm = ChatDashScopeOpenAI(model="qwen-turbo", max_tokens=200)
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15", max_tokens=200)
         llm_with_tools = llm.bind_tools([mock_get_stock_data])
         
         print("✅ 技术面分析流程模拟成功")

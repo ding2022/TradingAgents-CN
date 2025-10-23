@@ -108,9 +108,9 @@ ANALYSIS_DATE = "2024-06-26"  # 修改分析日期
 
 ```python
 # 在配置中选择不同的模型
-"deep_think_llm": "qwen-max",     # 最高质量，适合深度分析
+"deep_think_llm": "qwen3-max",     # 最高质量，适合深度分析
 "quick_think_llm": "qwen-plus",   # 平衡性能，日常使用
-# "qwen-turbo" 适合快速查询
+# "qwen-turbo-2025-07-15" 适合快速查询
 ```
 
 ### 2. 分析不同时间段
@@ -150,7 +150,7 @@ ANALYSIS_DATE = "2024-06-01"  # 半年度分析
 
 1. **API密钥错误**: 检查.env文件中的密钥配置
 2. **网络连接**: 确保网络连接正常
-3. **模型响应慢**: 可以尝试使用qwen-turbo模型
+3. **模型响应慢**: 可以尝试使用qwen-turbo-2025-07-15模型
 
 ### 获取帮助
 

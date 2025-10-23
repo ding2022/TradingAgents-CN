@@ -143,7 +143,7 @@ def render_model_config():
     
     with col1:
         new_provider = st.selectbox("供应商", ["dashscope", "openai", "google", "anthropic", "other"], key="new_provider")
-        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus-latest", key="new_model_name")
+        new_model_name = st.text_input("模型名称", placeholder="例如: gpt-4, qwen-plus-2025-09-11", key="new_model_name")
         new_api_key = st.text_input("API密钥", type="password", key="new_api_key")
 
     with col2:
@@ -421,7 +421,7 @@ def render_system_settings():
     with col2:
         default_model = st.text_input(
             "默认模型",
-            value=settings.get("default_model", "qwen-turbo"),
+            value=settings.get("default_model", "qwen-turbo-2025-07-15"),
             key="settings_default_model"
         )
 

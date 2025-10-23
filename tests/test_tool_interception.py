@@ -33,7 +33,7 @@ def test_hk_fundamentals_with_interception():
         
         # 创建LLM
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=1000
         )

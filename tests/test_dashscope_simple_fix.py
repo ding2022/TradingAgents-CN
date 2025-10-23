@@ -32,7 +32,7 @@ def test_basic_functionality():
         
         # 创建实例
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=100
         )
@@ -76,7 +76,7 @@ def test_tool_binding():
         
         # 创建LLM并绑定工具
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=200
         )
@@ -133,7 +133,7 @@ def test_vs_old_adapter():
         
         print("🔄 测试旧适配器...")
         try:
-            old_llm = ChatDashScope(model="qwen-turbo", max_tokens=100)
+            old_llm = ChatDashScope(model="qwen-turbo-2025-07-15", max_tokens=100)
             old_llm_with_tools = old_llm.bind_tools([test_tool])
             old_response = old_llm_with_tools.invoke([HumanMessage(content=prompt)])
             
@@ -145,7 +145,7 @@ def test_vs_old_adapter():
         
         print("🔄 测试新适配器...")
         try:
-            new_llm = ChatDashScopeOpenAI(model="qwen-turbo", max_tokens=100)
+            new_llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15", max_tokens=100)
             new_llm_with_tools = new_llm.bind_tools([test_tool])
             new_response = new_llm_with_tools.invoke([HumanMessage(content=prompt)])
             
@@ -173,8 +173,8 @@ def test_trading_graph_creation():
         # 简化配置
         config = {
             "llm_provider": "dashscope",
-            "deep_think_llm": "qwen-turbo",
-            "quick_think_llm": "qwen-turbo",
+            "deep_think_llm": "qwen-turbo-2025-07-15",
+            "quick_think_llm": "qwen-turbo-2025-07-15",
             "max_debate_rounds": 1,
             "online_tools": False,  # 关闭在线工具避免复杂性
             "selected_analysts": {

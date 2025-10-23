@@ -68,7 +68,7 @@ def test_dashscope_connection():
         
         # 测试简单调用
         response = Generation.call(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             messages=[{"role": "user", "content": "你好，请回复'连接成功'"}],
             result_format="message"
         )
@@ -94,7 +94,7 @@ def test_langchain_adapter():
         from langchain_core.messages import HumanMessage
         
         # 创建适配器实例
-        llm = ChatDashScope(model="qwen-turbo")
+        llm = ChatDashScope(model="qwen-turbo-2025-07-15")
         
         # 测试调用
         messages = [HumanMessage(content="请回复'适配器工作正常'")]
@@ -119,7 +119,7 @@ def test_trading_graph_config():
         config = DEFAULT_CONFIG.copy()
         config["llm_provider"] = "dashscope"
         config["deep_think_llm"] = "qwen-plus"
-        config["quick_think_llm"] = "qwen-turbo"
+        config["quick_think_llm"] = "qwen-turbo-2025-07-15"
         
         # 尝试初始化（不运行分析）
         ta = TradingAgentsGraph(debug=False, config=config)

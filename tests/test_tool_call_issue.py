@@ -42,7 +42,7 @@ def test_tool_call_mechanism():
         # 2. 创建LLM实例
         logger.info("2. 创建LLM实例...")
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-latest",
+            model="qwen-plus-2025-09-11",
             temperature=0.1,
             max_tokens=1000
         )

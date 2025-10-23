@@ -29,7 +29,7 @@ class ChatDashScopeOpenAI(ChatOpenAI):
         # 设置 DashScope OpenAI 兼容接口的默认配置
         kwargs.setdefault("base_url", "https://dashscope.aliyuncs.com/compatible-mode/v1")
         kwargs.setdefault("api_key", os.getenv("DASHSCOPE_API_KEY"))
-        kwargs.setdefault("model", "qwen-turbo")
+        kwargs.setdefault("model", "qwen-turbo-2025-07-15")
         kwargs.setdefault("temperature", 0.1)
         kwargs.setdefault("max_tokens", 2000)
         
@@ -44,7 +44,7 @@ class ChatDashScopeOpenAI(ChatOpenAI):
         super().__init__(**kwargs)
 
         logger.info(f"✅ 阿里百炼 OpenAI 兼容适配器初始化成功")
-        logger.info(f"   模型: {kwargs.get('model', 'qwen-turbo')}")
+        logger.info(f"   模型: {kwargs.get('model', 'qwen-turbo-2025-07-15')}")
 
         # 兼容不同版本的属性名
         api_base = getattr(self, 'base_url', None) or getattr(self, 'openai_api_base', None) or kwargs.get('base_url', 'unknown')
@@ -90,7 +90,7 @@ class ChatDashScopeOpenAI(ChatOpenAI):
 # 支持的模型列表
 DASHSCOPE_OPENAI_MODELS = {
     # 通义千问系列
-    "qwen-turbo": {
+    "qwen-turbo-2025-07-15": {
         "description": "通义千问 Turbo - 快速响应，适合日常对话",
         "context_length": 8192,
         "supports_function_calling": True,
@@ -102,19 +102,19 @@ DASHSCOPE_OPENAI_MODELS = {
         "supports_function_calling": True,
         "recommended_for": ["复杂分析", "专业任务", "深度思考"]
     },
-    "qwen-plus-latest": {
+    "qwen-plus-2025-09-11": {
         "description": "通义千问 Plus 最新版 - 最新功能和性能",
         "context_length": 32768,
         "supports_function_calling": True,
         "recommended_for": ["最新功能", "复杂分析", "专业任务"]
     },
-    "qwen-max": {
+    "qwen3-max": {
         "description": "通义千问 Max - 最强性能，适合复杂任务",
         "context_length": 32768,
         "supports_function_calling": True,
         "recommended_for": ["复杂推理", "专业分析", "高质量输出"]
     },
-    "qwen-max-latest": {
+    "qwen3-max-latest": {
         "description": "通义千问 Max 最新版 - 最强性能和最新功能",
         "context_length": 32768,
         "supports_function_calling": True,
@@ -135,7 +135,7 @@ def get_available_openai_models() -> Dict[str, Dict[str, Any]]:
 
 
 def create_dashscope_openai_llm(
-    model: str = "qwen-plus-latest",
+    model: str = "qwen-plus-2025-09-11",
     api_key: Optional[str] = None,
     temperature: float = 0.1,
     max_tokens: int = 2000,
@@ -153,7 +153,7 @@ def create_dashscope_openai_llm(
 
 
 def test_dashscope_openai_connection(
-    model: str = "qwen-turbo",
+    model: str = "qwen-turbo-2025-07-15",
     api_key: Optional[str] = None
 ) -> bool:
     """测试 DashScope OpenAI 兼容接口连接"""
@@ -186,7 +186,7 @@ def test_dashscope_openai_connection(
 
 
 def test_dashscope_openai_function_calling(
-    model: str = "qwen-plus-latest",
+    model: str = "qwen-plus-2025-09-11",
     api_key: Optional[str] = None
 ) -> bool:
     """测试 DashScope OpenAI 兼容接口的 Function Calling"""

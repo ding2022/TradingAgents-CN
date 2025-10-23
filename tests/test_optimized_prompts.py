@@ -80,7 +80,7 @@ def test_market_analyst_prompt():
         from tradingagents.default_config import DEFAULT_CONFIG
         
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=500
         )

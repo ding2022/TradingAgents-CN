@@ -108,7 +108,7 @@ def demo_basic_usage():
         # 初始化LLM
         logger.info(f"🤖 初始化DashScope LLM...")
         llm = ChatDashScope(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             api_key=api_key,
             temperature=0.7,
             max_tokens=200
@@ -158,10 +158,10 @@ def demo_cost_estimation():
     
     # 不同场景的估算
     scenarios = [
-        ("简单查询", "qwen-turbo", 100, 50),
-        ("详细分析", "qwen-turbo", 500, 300),
-        ("深度研究", "qwen-plus-latest", 1000, 800),
-        ("复杂报告", "qwen-plus-latest", 2000, 1500)
+        ("简单查询", "qwen-turbo-2025-07-15", 100, 50),
+        ("详细分析", "qwen-turbo-2025-07-15", 500, 300),
+        ("深度研究", "qwen-plus-2025-09-11", 1000, 800),
+        ("复杂报告", "qwen-plus-2025-09-11", 2000, 1500)
     ]
     
     logger.info(f"📊 不同使用场景的成本估算:")

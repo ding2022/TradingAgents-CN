@@ -52,7 +52,7 @@ def main():
         flush_print("-" * 40)
         
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=200
         )
@@ -125,7 +125,7 @@ def main():
         flush_print("\n🔧 测试6: 不同模型测试")
         flush_print("-" * 40)
         
-        models = ["qwen-turbo", "qwen-plus-latest"]
+        models = ["qwen-turbo-2025-07-15", "qwen-plus-2025-09-11"]
         
         for model in models:
             flush_print(f"\n   测试模型: {model}")

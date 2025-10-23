@@ -149,8 +149,8 @@ pip install -r requirements.txt
 ```bash
 # 新的配置格式（可选）
 llm_provider: "dashscope"
-deep_think_llm: "qwen-plus-latest"
-quick_think_llm: "qwen-turbo"
+deep_think_llm: "qwen-plus-2025-09-11"
+quick_think_llm: "qwen-turbo-2025-07-15"
 ```
 
 ### 数据源配置

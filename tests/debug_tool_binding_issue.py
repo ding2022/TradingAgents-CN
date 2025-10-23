@@ -31,7 +31,7 @@ def test_tool_isolation():
         
         # 创建LLM
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=200
         )
@@ -79,7 +79,7 @@ def test_tool_isolation():
         
         print(f"\n🔧 测试2: 创建新的LLM实例")
         llm2 = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=200
         )
@@ -141,8 +141,8 @@ def test_llm_instance_reuse():
         # 检查是否存在全局LLM实例
         print(f"  检查LLM实例创建...")
         
-        llm1 = ChatDashScopeOpenAI(model="qwen-turbo")
-        llm2 = ChatDashScopeOpenAI(model="qwen-turbo")
+        llm1 = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
+        llm2 = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
         
         print(f"  LLM1 ID: {id(llm1)}")
         print(f"  LLM2 ID: {id(llm2)}")

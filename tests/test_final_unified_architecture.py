@@ -97,7 +97,7 @@ def test_llm_tool_calling_simulation():
         # 模拟LLM
         class MockLLM:
             def __init__(self):
-                self.model_name = "qwen-turbo"
+                self.model_name = "qwen-turbo-2025-07-15"
                 self.temperature = 0.1
                 self.max_tokens = 2000
                 self.__class__.__name__ = "ChatDashScopeOpenAI"

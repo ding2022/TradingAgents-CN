@@ -149,7 +149,7 @@ from tradingagents.llm_adapters import ChatDashScopeOpenAI
 
 # 创建适配器
 llm = ChatDashScopeOpenAI(
-    model="qwen-plus-latest",
+    model="qwen-plus-2025-09-11",
     temperature=0.1,
     max_tokens=2000
 )
@@ -177,7 +177,7 @@ from tradingagents.llm_adapters.openai_compatible_base import create_openai_comp
 
 llm = create_openai_compatible_llm(
     provider="dashscope",
-    model="qwen-max-latest",
+    model="qwen3-max-latest",
     temperature=0.0,
     max_tokens=3000
 )
@@ -203,7 +203,7 @@ class CustomLLMAdapter(OpenAICompatibleBase):
 from tradingagents.llm_adapters.dashscope_openai_adapter import test_dashscope_openai_connection
 
 # 测试连接
-success = test_dashscope_openai_connection(model="qwen-turbo")
+success = test_dashscope_openai_connection(model="qwen-turbo-2025-07-15")
 ```
 
 ### 2. 工具调用测试
@@ -211,7 +211,7 @@ success = test_dashscope_openai_connection(model="qwen-turbo")
 from tradingagents.llm_adapters.dashscope_openai_adapter import test_dashscope_openai_function_calling
 
 # 测试Function Calling
-success = test_dashscope_openai_function_calling(model="qwen-plus-latest")
+success = test_dashscope_openai_function_calling(model="qwen-plus-2025-09-11")
 ```
 
 ### 3. 完整功能测试
@@ -259,9 +259,9 @@ class EnhancedDashScopeAdapter(ChatDashScopeOpenAI):
 ## 📋 最佳实践
 
 ### 1. 模型选择
-- **快速任务**: qwen-turbo
-- **复杂分析**: qwen-plus-latest
-- **最高质量**: qwen-max-latest
+- **快速任务**: qwen-turbo-2025-07-15
+- **复杂分析**: qwen-plus-2025-09-11
+- **最高质量**: qwen3-max-latest
 
 ### 2. 参数调优
 - **temperature**: 0.1 (分析任务)

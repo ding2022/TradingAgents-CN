@@ -31,7 +31,7 @@ def test_dashscope_token_tracking():
         # 初始化DashScope适配器
         print("📝 初始化DashScope适配器...")
         llm = ChatDashScope(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             api_key=api_key,
             temperature=0.7,
             max_tokens=500

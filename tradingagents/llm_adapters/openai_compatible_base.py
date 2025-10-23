@@ -184,7 +184,7 @@ class ChatDashScopeOpenAIUnified(OpenAICompatibleBase):
     
     def __init__(
         self,
-        model: str = "qwen-turbo",
+        model: str = "qwen-turbo-2025-07-15",
         api_key: Optional[str] = None,
         temperature: float = 0.1,
         max_tokens: Optional[int] = None,
@@ -336,11 +336,11 @@ OPENAI_COMPATIBLE_PROVIDERS = {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "api_key_env": "DASHSCOPE_API_KEY",
         "models": {
-            "qwen-turbo": {"context_length": 8192, "supports_function_calling": True},
+            "qwen-turbo-2025-07-15": {"context_length": 8192, "supports_function_calling": True},
             "qwen-plus": {"context_length": 32768, "supports_function_calling": True},
-            "qwen-plus-latest": {"context_length": 32768, "supports_function_calling": True},
-            "qwen-max": {"context_length": 32768, "supports_function_calling": True},
-            "qwen-max-latest": {"context_length": 32768, "supports_function_calling": True}
+            "qwen-plus-2025-09-11": {"context_length": 32768, "supports_function_calling": True},
+            "qwen3-max": {"context_length": 32768, "supports_function_calling": True},
+            "qwen3-max-latest": {"context_length": 32768, "supports_function_calling": True}
         }
     },
     "qianfan": {

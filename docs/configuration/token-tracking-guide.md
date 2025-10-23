@@ -90,7 +90,7 @@ from langchain_core.messages import HumanMessage
 
 # 初始化LLM
 llm = ChatDashScope(
-    model="qwen-turbo",
+    model="qwen-turbo-2025-07-15",
     temperature=0.7
 )
 
@@ -134,7 +134,7 @@ print(f"会话成本: ¥{session_cost:.4f}")
 # 估算成本（用于预算规划）
 estimated_cost = token_tracker.estimate_cost(
     provider="dashscope",
-    model_name="qwen-turbo",
+    model_name="qwen-turbo-2025-07-15",
     estimated_input_tokens=1000,
     estimated_output_tokens=500
 )
@@ -151,7 +151,7 @@ from tradingagents.config.config_manager import config_manager, PricingConfig
 # 添加自定义定价
 custom_pricing = PricingConfig(
     provider="dashscope",
-    model_name="qwen-max",
+    model_name="qwen3-max",
     input_price_per_1k=0.02,   # 每1000个输入token的价格（人民币）
     output_price_per_1k=0.06,  # 每1000个输出token的价格（人民币）
     currency="CNY"
@@ -168,9 +168,9 @@ config_manager.save_pricing(pricing_list)
 
 | 模型 | 输入价格 (¥/1K tokens) | 输出价格 (¥/1K tokens) |
 |------|----------------------|----------------------|
-| qwen-turbo | 0.002 | 0.006 |
-| qwen-plus-latest | 0.004 | 0.012 |
-| qwen-max | 0.02 | 0.06 |
+| qwen-turbo-2025-07-15 | 0.002 | 0.006 |
+| qwen-plus-2025-09-11 | 0.004 | 0.012 |
+| qwen3-max | 0.02 | 0.06 |
 
 ### OpenAI
 

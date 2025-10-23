@@ -42,7 +42,7 @@ def test_web_integration():
                 analysts=["fundamentals"],
                 research_depth="快速",
                 llm_provider="dashscope",
-                llm_model="qwen-plus-latest",
+                llm_model="qwen-plus-2025-09-11",
                 analysis_date=datetime.now().strftime('%Y-%m-%d'),
                 progress_callback=mock_update_progress
             )

@@ -297,7 +297,7 @@
 
 | 模型提供商        | 支持模型                     | 特色功能                | 新增功能 |
 | ----------------- | ---------------------------- | ----------------------- | -------- |
-| **🇨🇳 阿里百炼** | qwen-turbo/plus/max          | 中文优化，成本效益高    | ✅ 集成  |
+| **🇨🇳 阿里百炼** | qwen-turbo-2025-07-15/plus/max          | 中文优化，成本效益高    | ✅ 集成  |
 | **🇨🇳 DeepSeek** | deepseek-chat                | 工具调用，性价比极高    | ✅ 集成  |
 | **🌍 Google AI**  | **9个验证模型**              | 最新Gemini 2.5系列      | 🆕 升级  |
 | ├─**最新旗舰**  | gemini-2.5-pro/flash         | 最新旗舰，超快响应      | 🆕 新增  |
@@ -967,7 +967,7 @@ from tradingagents.default_config import DEFAULT_CONFIG
 config = DEFAULT_CONFIG.copy()
 config["llm_provider"] = "dashscope"
 config["deep_think_llm"] = "qwen-plus"      # 深度分析
-config["quick_think_llm"] = "qwen-turbo"    # 快速任务
+config["quick_think_llm"] = "qwen-turbo-2025-07-15"    # 快速任务
 
 # 创建交易智能体
 ta = TradingAgentsGraph(debug=True, config=config)

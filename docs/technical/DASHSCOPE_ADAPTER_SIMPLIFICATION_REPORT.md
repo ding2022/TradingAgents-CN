@@ -46,7 +46,7 @@ class ChatDashScopeOpenAI(ChatOpenAI):
         # 设置 DashScope OpenAI 兼容接口配置
         kwargs.setdefault("base_url", "https://dashscope.aliyuncs.com/compatible-mode/v1")
         kwargs.setdefault("api_key", os.getenv("DASHSCOPE_API_KEY"))
-        kwargs.setdefault("model", "qwen-turbo")
+        kwargs.setdefault("model", "qwen-turbo-2025-07-15")
         
         # 直接调用父类初始化
         super().__init__(**kwargs)

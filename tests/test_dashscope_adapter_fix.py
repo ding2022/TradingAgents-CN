@@ -38,7 +38,7 @@ def test_enhanced_tool_binding():
         
         # 创建适配器实例
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=200
         )
@@ -85,7 +85,7 @@ def test_tool_format_validation():
         from tradingagents.llm_adapters.dashscope_openai_adapter import ChatDashScopeOpenAI
         
         # 创建适配器实例
-        llm = ChatDashScopeOpenAI(model="qwen-turbo")
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
         
         # 测试有效的工具格式
         valid_tool = {
@@ -134,7 +134,7 @@ def test_backup_tool_creation():
         from langchain_core.tools import tool
         
         # 创建适配器实例
-        llm = ChatDashScopeOpenAI(model="qwen-turbo")
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
         
         # 定义测试工具
         @tool
@@ -172,7 +172,7 @@ def test_tool_call_response_validation():
         from tradingagents.llm_adapters.dashscope_openai_adapter import ChatDashScopeOpenAI
         
         # 创建适配器实例
-        llm = ChatDashScopeOpenAI(model="qwen-turbo")
+        llm = ChatDashScopeOpenAI(model="qwen-turbo-2025-07-15")
         
         # 测试有效的工具调用格式
         valid_tool_call = {
@@ -237,7 +237,7 @@ def test_comprehensive_tool_calling():
         
         # 创建适配器并绑定工具
         llm = ChatDashScopeOpenAI(
-            model="qwen-plus-latest",
+            model="qwen-plus-2025-09-11",
             temperature=0.1,
             max_tokens=500
         )

@@ -237,7 +237,7 @@ def run_stock_analysis(stock_symbol, analysis_date, analysts, research_depth, ll
             config["online_tools"] = True  # 所有市场都使用统一工具
             logger.info(f"🔧 [快速分析] {market_type}使用统一工具，确保数据源正确和稳定性")
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen-turbo"  # 使用最快模型
+                config["quick_think_llm"] = "qwen-turbo-2025-07-15"  # 使用最快模型
                 config["deep_think_llm"] = "qwen-plus"
             elif llm_provider == "deepseek":
                 config["quick_think_llm"] = "deepseek-chat"  # DeepSeek只有一个模型
@@ -275,7 +275,7 @@ def run_stock_analysis(stock_symbol, analysis_date, analysts, research_depth, ll
             config["online_tools"] = True
             if llm_provider == "dashscope":
                 config["quick_think_llm"] = "qwen-plus"
-                config["deep_think_llm"] = "qwen3-max"
+                config["deep_think_llm"] = "qwen-plus-2025-09-11"
             elif llm_provider == "deepseek":
                 config["quick_think_llm"] = "deepseek-chat"
                 config["deep_think_llm"] = "deepseek-chat"
@@ -286,7 +286,7 @@ def run_stock_analysis(stock_symbol, analysis_date, analysts, research_depth, ll
             config["online_tools"] = True
             if llm_provider == "dashscope":
                 config["quick_think_llm"] = "qwen-plus"
-                config["deep_think_llm"] = "qwen3-max"
+                config["deep_think_llm"] = "qwen-plus-2025-09-11"
             elif llm_provider == "deepseek":
                 config["quick_think_llm"] = "deepseek-chat"
                 config["deep_think_llm"] = "deepseek-chat"
@@ -296,8 +296,8 @@ def run_stock_analysis(stock_symbol, analysis_date, analysts, research_depth, ll
             config["memory_enabled"] = True
             config["online_tools"] = True
             if llm_provider == "dashscope":
-                config["quick_think_llm"] = "qwen3-max"
-                config["deep_think_llm"] = "qwen3-max"
+                config["quick_think_llm"] = "qwen-plus-2025-09-11"
+                config["deep_think_llm"] = "qwen-plus-2025-09-11"
             elif llm_provider == "deepseek":
                 config["quick_think_llm"] = "deepseek-chat"
                 config["deep_think_llm"] = "deepseek-chat"

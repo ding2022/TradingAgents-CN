@@ -41,7 +41,7 @@ def test_cost_calculation():
     test_cases = [
         ("deepseek", "deepseek-chat", 2000, 1000),
         ("deepseek", "deepseek-coder", 1500, 800),
-        ("dashscope", "qwen-turbo", 2000, 1000),  # 对比测试
+        ("dashscope", "qwen-turbo-2025-07-15", 2000, 1000),  # 对比测试
     ]
     
     for provider, model, input_tokens, output_tokens in test_cases:

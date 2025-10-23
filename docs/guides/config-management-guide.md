@@ -60,7 +60,7 @@ python -m streamlit run web/app.py
 
 | 供应商 | 模型示例 | 货币 | 说明 |
 |--------|----------|------|------|
-| **阿里百炼** | qwen-turbo, qwen-plus-latest, qwen-max | CNY | 国产模型，推荐使用 |
+| **阿里百炼** | qwen-turbo-2025-07-15, qwen-plus-2025-09-11, qwen3-max | CNY | 国产模型，推荐使用 |
 | **OpenAI** | gpt-3.5-turbo, gpt-4, gpt-4-turbo | USD | 国际领先模型 |
 | **Google** | gemini-pro, gemini-pro-vision | USD | Google最新模型 |
 | **Anthropic** | claude-3-sonnet, claude-3-opus | USD | 高质量对话模型 |
@@ -72,7 +72,7 @@ python -m streamlit run web/app.py
 1. 进入 **"模型配置"** 页面
 2. 在 **"添加新模型"** 部分填写：
    - **供应商**: 选择模型提供商
-   - **模型名称**: 输入具体模型名（如 qwen-plus-latest）
+   - **模型名称**: 输入具体模型名（如 qwen-plus-2025-09-11）
    - **API密钥**: 输入您的API密钥
    - **最大Token数**: 设置输出限制（1000-32000）
    - **温度参数**: 控制输出随机性（0.0-2.0）
@@ -91,7 +91,7 @@ python -m streamlit run web/app.py
 ```json
 {
   "provider": "dashscope",
-  "model_name": "qwen-plus-latest",
+  "model_name": "qwen-plus-2025-09-11",
   "api_key": "sk-your-api-key-here",
   "max_tokens": 4000,
   "temperature": 0.7,
@@ -106,9 +106,9 @@ python -m streamlit run web/app.py
 #### **阿里百炼 (CNY/1000 tokens)**
 | 模型 | 输入价格 | 输出价格 | 说明 |
 |------|----------|----------|------|
-| qwen-turbo | ¥0.002 | ¥0.006 | 快速响应 |
+| qwen-turbo-2025-07-15 | ¥0.002 | ¥0.006 | 快速响应 |
 | qwen-plus | ¥0.004 | ¥0.012 | 平衡性能 |
-| qwen-max | ¥0.020 | ¥0.060 | 最强性能 |
+| qwen3-max | ¥0.020 | ¥0.060 | 最强性能 |
 
 #### **OpenAI (USD/1000 tokens)**
 | 模型 | 输入价格 | 输出价格 | 说明 |
@@ -182,7 +182,7 @@ python -m streamlit run web/app.py
 | 设置项 | 说明 | 默认值 |
 |--------|------|--------|
 | **默认供应商** | 新分析时的默认模型供应商 | dashscope |
-| **默认模型** | 默认使用的模型名称 | qwen-turbo |
+| **默认模型** | 默认使用的模型名称 | qwen-turbo-2025-07-15 |
 | **启用成本跟踪** | 是否记录Token使用和成本 | 启用 |
 | **成本警告阈值** | 日成本超过此值时警告 | ¥100 |
 | **首选货币** | 成本显示的首选货币 | CNY |
@@ -244,7 +244,7 @@ python -m streamlit run web/app.py
 
 **操作**:
 1. 设置成本警告阈值为¥16.67（500/30天）
-2. 选择性价比高的模型（如qwen-turbo）
+2. 选择性价比高的模型（如qwen-turbo-2025-07-15）
 3. 定期查看使用统计，调整使用频率
 
 ### 场景2：多模型对比
@@ -252,7 +252,7 @@ python -m streamlit run web/app.py
 **目标**: 比较不同模型的性价比
 
 **操作**:
-1. 配置多个模型（qwen-turbo, qwen-plus, gpt-3.5-turbo）
+1. 配置多个模型（qwen-turbo-2025-07-15, qwen-plus, gpt-3.5-turbo）
 2. 对同一股票进行多次分析
 3. 在使用统计中比较成本和效果
 

@@ -71,7 +71,7 @@ def demo_user_activities():
     logger.log_config_change(
         config_type="model_settings",
         changes={
-            "default_model": {"old": "qwen-turbo", "new": "qwen-plus"},
+            "default_model": {"old": "qwen-turbo-2025-07-15", "new": "qwen-plus"},
             "change_reason": "performance_optimization"
         }
     )

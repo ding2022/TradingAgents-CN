@@ -36,7 +36,7 @@ def test_simple_fundamentals():
         # 创建LLM实例
         from tradingagents.llm_adapters import ChatDashScopeOpenAI
         llm = ChatDashScopeOpenAI(
-            model="qwen-turbo",
+            model="qwen-turbo-2025-07-15",
             temperature=0.1,
             max_tokens=1000
         )

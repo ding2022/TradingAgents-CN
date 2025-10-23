@@ -101,11 +101,11 @@ def test_cost_calculation():
         
         dashscope_cost2 = config_manager.calculate_cost(
             provider="dashscope",
-            model_name="qwen-plus-latest",
+            model_name="qwen-plus-2025-09-11",
             input_tokens=1000,
             output_tokens=500
         )
-        print(f"   qwen-plus-latest成本: ¥{dashscope_cost2:.6f}")
+        print(f"   qwen-plus-2025-09-11成本: ¥{dashscope_cost2:.6f}")
         
         return True
         

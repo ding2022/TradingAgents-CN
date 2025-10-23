@@ -48,7 +48,7 @@ def main():
     config = DEFAULT_CONFIG.copy()
     config["llm_provider"] = "dashscope"
     config["deep_think_llm"] = "qwen-plus"      # 深度分析
-    config["quick_think_llm"] = "qwen-turbo"    # 快速任务
+    config["quick_think_llm"] = "qwen-turbo-2025-07-15"    # 快速任务
     config["max_debate_rounds"] = 1             # 减少辩论轮次
     config["online_tools"] = False             # 暂时禁用在线工具
     config["use_memory"] = False               # 禁用记忆功能

@@ -14,9 +14,9 @@
 
 #### 支持的提供商
 - **DashScope (阿里百炼)**
-  - qwen-turbo: 快速响应
-  - qwen-plus-latest: 平衡性能
-  - qwen-max: 最强性能
+  - qwen-turbo-2025-07-15: 快速响应
+  - qwen-plus-2025-09-11: 平衡性能
+  - qwen3-max: 最强性能
 
 - **DeepSeek V3**
   - deepseek-chat: 最新V3模型
@@ -126,7 +126,7 @@ class ModelPersistence:
 ## 🧪 测试验证
 
 ### 基础测试场景
-1. 选择DashScope → qwen-max → 刷新 → 检查保持
+1. 选择DashScope → qwen3-max → 刷新 → 检查保持
 2. 选择DeepSeek → deepseek-chat → 刷新 → 检查保持
 3. 选择Google → gemini-2.0-flash → 刷新 → 检查保持
 

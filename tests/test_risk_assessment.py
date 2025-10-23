@@ -172,7 +172,7 @@ def test_risk_assessment_integration():
         if dashscope_key:
             config["llm_provider"] = "dashscope"
             config["deep_think_llm"] = "qwen-plus"
-            config["quick_think_llm"] = "qwen-turbo"
+            config["quick_think_llm"] = "qwen-turbo-2025-07-15"
         elif google_key:
             config["llm_provider"] = "google"
             config["deep_think_llm"] = "gemini-2.5-flash-lite-preview-06-17"

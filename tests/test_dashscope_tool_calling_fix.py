@@ -239,7 +239,7 @@ def test_model_comparison():
         # 测试不同模型
         models = [
             "qwen-turbo-2025-07-15",
-            "qwen-plus",
+            "qwen-plus-2025-09-11",
             "qwen-plus-2025-09-11",
             "qwen3-max-latest"
         ]

@@ -115,7 +115,7 @@ config = {
 config = {
     "llm_provider": "dashscope", 
     "deep_think_llm": "qwen3-max",       # 深度思考使用Max
-    "quick_think_llm": "qwen-plus",     # 快速任务使用Plus
+    "quick_think_llm": "qwen-plus-2025-09-11",     # 快速任务使用Plus
     "max_debate_rounds": 2,             # 增加辩论轮次
 }
 ```
@@ -125,7 +125,7 @@ config = {
 config = {
     "llm_provider": "dashscope",
     "deep_think_llm": "qwen3-max-longcontext",  # 使用长文本版本
-    "quick_think_llm": "qwen-plus",
+    "quick_think_llm": "qwen-plus-2025-09-11",
     "max_debate_rounds": 1,
 }
 ```

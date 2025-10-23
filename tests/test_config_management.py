@@ -170,7 +170,7 @@ def test_pricing_accuracy():
         # 测试不同供应商的定价
         test_cases = [
             ("dashscope", "qwen-turbo-2025-07-15", 1000, 500),
-            ("dashscope", "qwen-plus", 2000, 1000),
+            ("dashscope", "qwen-plus-2025-09-11", 2000, 1000),
             ("openai", "gpt-3.5-turbo", 1000, 500),
             ("google", "gemini-pro", 1000, 500),
         ]
@@ -203,7 +203,7 @@ def test_usage_statistics():
         # 添加多条使用记录
         test_records = [
             ("dashscope", "qwen-turbo-2025-07-15", 1000, 500, "session1", "stock_analysis"),
-            ("dashscope", "qwen-plus", 2000, 1000, "session2", "stock_analysis"),
+            ("dashscope", "qwen-plus-2025-09-11", 2000, 1000, "session2", "stock_analysis"),
             ("openai", "gpt-3.5-turbo", 1500, 750, "session3", "news_analysis"),
             ("google", "gemini-pro", 1200, 600, "session4", "social_analysis"),
         ]

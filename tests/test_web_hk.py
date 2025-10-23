@@ -81,7 +81,7 @@ def test_analysis_runner_hk_support():
             analysts=["market", "fundamentals"],
             research_depth=3,
             llm_provider="dashscope",
-            llm_model="qwen-plus",
+            llm_model="qwen-plus-2025-09-11",
             error_msg="测试错误",
             market_type="港股"
         )

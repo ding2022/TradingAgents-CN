@@ -113,7 +113,7 @@ def test_dashscope_tool_calling():
         
         # 创建百炼实例
         dashscope_llm = ChatDashScope(
-            model="qwen-plus",
+            model="qwen-plus-2025-09-11",
             temperature=0.1,
             max_tokens=2000
         )

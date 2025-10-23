@@ -44,7 +44,7 @@ def test_simple_llm():
         
         # 创建模型实例
         llm = ChatDashScope(
-            model="qwen-plus",
+            model="qwen-plus-2025-09-11",
             temperature=0.1,
             max_tokens=1000
         )

@@ -55,7 +55,7 @@ DEEPSEEK_BASE_URL=https://api.deepseek.com
 #### 支持的模型
 ```python
 qwen_models = {
-    "qwen-plus": {
+    "qwen-plus-2025-09-11": {
         "description": "通义千问Plus模型",
         "context_length": 32000,
         "cost_per_1k_tokens": {"input": 0.004, "output": 0.012},

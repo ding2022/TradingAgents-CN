@@ -96,7 +96,7 @@ DASHSCOPE_OPENAI_MODELS = {
         "supports_function_calling": True,
         "recommended_for": ["快速任务", "日常对话", "简单分析"]
     },
-    "qwen-plus": {
+    "qwen-plus-2025-09-11": {
         "description": "通义千问 Plus - 平衡性能和成本",
         "context_length": 32768,
         "supports_function_calling": True,

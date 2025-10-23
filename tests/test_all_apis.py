@@ -160,7 +160,7 @@ def test_social_media_analyst():
         from tradingagents.llm_adapters import ChatDashScope
         
         # 创建模型实例
-        llm = ChatDashScope(model="qwen-plus")
+        llm = ChatDashScope(model="qwen-plus-2025-09-11")
         
         # 这里需要toolkit实例，暂时跳过实际测试
         print("✅ 社交媒体分析师模块可用")

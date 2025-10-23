@@ -214,7 +214,7 @@ python -m streamlit run web/app.py
 {
     "timestamp": "2025-06-28T10:30:00",
     "provider": "dashscope",
-    "model_name": "qwen-plus",
+    "model_name": "qwen-plus-2025-09-11",
     "input_tokens": 2500,
     "output_tokens": 1200,
     "cost": 0.024,

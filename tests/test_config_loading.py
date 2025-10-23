@@ -93,7 +93,7 @@ def test_cost_calculation():
         print("🌟 测试百炼成本计算:")
         dashscope_cost1 = config_manager.calculate_cost(
             provider="dashscope",
-            model_name="qwen-plus",
+            model_name="qwen-plus-2025-09-11",
             input_tokens=1000,
             output_tokens=500
         )

@@ -171,7 +171,7 @@ def test_risk_assessment_integration():
         config = DEFAULT_CONFIG.copy()
         if dashscope_key:
             config["llm_provider"] = "dashscope"
-            config["deep_think_llm"] = "qwen-plus"
+            config["deep_think_llm"] = "qwen-plus-2025-09-11"
             config["quick_think_llm"] = "qwen-turbo-2025-07-15"
         elif google_key:
             config["llm_provider"] = "google"

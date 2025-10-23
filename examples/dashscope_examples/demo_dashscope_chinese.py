@@ -154,7 +154,7 @@ def compare_models_chinese():
     
     models = [
         ("qwen-turbo-2025-07-15", "通义千问 Turbo"),
-        ("qwen-plus", "通义千问 Plus"),
+        ("qwen-plus-2025-09-11", "通义千问 Plus"),
         ("qwen3-max", "通义千问 Max")
     ]
     

@@ -337,7 +337,7 @@ OPENAI_COMPATIBLE_PROVIDERS = {
         "api_key_env": "DASHSCOPE_API_KEY",
         "models": {
             "qwen-turbo-2025-07-15": {"context_length": 8192, "supports_function_calling": True},
-            "qwen-plus": {"context_length": 32768, "supports_function_calling": True},
+            "qwen-plus-2025-09-11": {"context_length": 32768, "supports_function_calling": True},
             "qwen-plus-2025-09-11": {"context_length": 32768, "supports_function_calling": True},
             "qwen3-max": {"context_length": 32768, "supports_function_calling": True},
             "qwen3-max-latest": {"context_length": 32768, "supports_function_calling": True}
